@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam P.Lioubavina — Game Developer</title>
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Structured Data for AI Analysis -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adam Puche Lioubavina",
+      "jobTitle": "Game Programmer",
+      "url": "https://adamlioubavina.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valencia",
+        "addressCountry": "ES"
+      },
+      "knowsLanguage": [
+        {"@type": "Language", "name": "Spanish", "fluency": "Native"},
+        {"@type": "Language", "name": "English", "fluency": "Professional"},
+        {"@type": "Language", "name": "Russian", "fluency": "Intermediate"},
+        {"@type": "Language", "name": "Japanese", "fluency": "Beginner"}
+      ],
+      "knowsAbout": [
+        "Game Development", "C++", "C#", "Python", "Unity", "Unreal Engine 5",
+        "Vulkan", "OpenGL", "ARM Architecture", "CMake", "Premake5", "Perforce",
+        "Windows", "macOS", "Linux", "Custom STL", "Memory Management"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Game Programmer",
+        "occupationLocation": {
+          "@type": "Place",
+          "name": "Valencia, Spain"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Matrix ARM64 Background -->
+    <canvas id="matrix-bg"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ADAM P.LIOUBAVINA</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About me</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Proyects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="glitch" data-text="GAME PROGRAMMER">GAME PROGRAMMER</div>
+            <h1 class="hero-title">Hello, I'm <span class="highlight">Adam Puche Lioubavina</span></h1>
+            <p class="hero-subtitle"><span id="typed-text"></span><span class="typed-cursor">|</span></p>
+            <p class="hero-location">📍 Valencia, Spain</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">See proyects</a>
+                <a href="#contact" class="btn btn-secondary">Contact me</a>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <!-- Interactive Terminal -->
+        <div class="terminal" id="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="terminal-btn close"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                </div>
+                <span class="terminal-title">adam@portfolio:~</span>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-line terminal-welcome">Welcome to Adam's Portfolio Terminal v1.0</div>
+                <div class="terminal-line">Type <span class="terminal-command">help</span> to see available commands.</div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt">adam@portfolio:~$</span>
+                    <input type="text" class="terminal-input" id="terminalInput" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am Adam Puche Lioubavina, a video game programmer with an HND in Computing. I am passionate about developing game mechanics and efficient programming systems. </p>
+                    <p>I currently work as a WordPress developer while continuing to develop my skills in video game programming with C/C++, C#, 
+                      and engines such as Unity and Unreal Engine 5. I also have experience in teamwork and leadership thanks to my role as a basketball coach. </p>
+                        <div class="languages">
+                        <h3>Idiomas</h3>
+                        <div class="language-list">
+                            <span class="language-tag">🇪🇸 Spanish (Native)</span>
+                            <span class="language-tag">🇬🇧 English (B2)</span>
+                            <span class="language-tag">🇷🇺 Russian (B1)</span>
+                            <span class="language-tag">🇯🇵 Japonese (A1)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label">Years of Work Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label">Completed Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="bento-grid">
+                <!-- Row 1: Large card + 2 small cards -->
+                <div class="bento-item bento-large bento-tilt">
+                    <div class="bento-glow"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg class="bento-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 12 L8 44 L12 48 L52 48 L56 44 L56 12 L52 8 L12 8 Z" stroke="var(--secondary)" stroke-width="1.5" fill="none"/>
+                                <path d="M20 48 L20 56 L44 56 L44 48" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+                                <path d="M28 56 L28 60 L36 60 L36 56" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <polyline points="22,20 28,26 22,32" stroke="var(--secondary)" stroke-width="1.5" fill="none" stroke-linejoin="miter"/>
+                                <polyline points="42,20 36,26 42,32" stroke="var(--secondary)" stroke-width="1.5" fill="none" stroke-linejoin="miter"/>
+                                <line x1="34" y1="18" x2="30" y2="34" stroke="var(--secondary)" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3>Programming Languages</h3>
+                        <div class="bento-tags">
+                            <span class="bento-tag" data-tooltip="Systems programming & low-level control">C</span>
+                            <span class="bento-tag" data-tooltip="Game development & performance-critical code">C++</span>
+                            <span class="bento-tag" data-tooltip="Unity scripting & game logic">C#</span>
+                            <span class="bento-tag" data-tooltip="Production scripting & automation">Python</span>
+                            <span class="bento-tag" data-tooltip="Web development & markup">HTML</span>
+                            <span class="bento-tag" data-tooltip="Scripting & configuration">Lua</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item bento-tall bento-tilt">
+                    <div class="bento-glow"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg class="bento-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="18" width="52" height="30" rx="4" stroke="var(--secondary)" stroke-width="1.5" fill="none"/>
+                                <circle cx="18" cy="33" r="4" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <line x1="18" y1="29" x2="18" y2="25" stroke="var(--accent)" stroke-width="1"/>
+                                <line x1="14" y1="33" x2="10" y2="33" stroke="var(--accent)" stroke-width="1"/>
+                                <circle cx="46" cy="27" r="2.5" stroke="var(--secondary)" stroke-width="1" fill="none"/>
+                                <circle cx="46" cy="39" r="2.5" stroke="var(--secondary)" stroke-width="1" fill="none"/>
+                                <line x1="30" y1="24" x2="38" y2="24" stroke="var(--secondary)" stroke-width="1"/>
+                                <line x1="32" y1="28" x2="36" y2="28" stroke="var(--secondary)" stroke-width="1"/>
+                                <path d="M24 48 L24 54 L40 54 L40 48" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>Game Engines</h3>
+                        <div class="bento-tags">
+                            <span class="bento-tag" data-tooltip="2D/3D game development with C#">Unity</span>
+                            <span class="bento-tag" data-tooltip="AAA games, Blueprints & C++">Unreal Engine 5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item bento-tall bento-tilt">
+                    <div class="bento-glow"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg class="bento-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="8" width="44" height="34" rx="2" stroke="var(--secondary)" stroke-width="1.5" fill="none"/>
+                                <path d="M22 42 L22 48 L42 48 L42 42" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+                                <path d="M16 52 L48 52" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <rect x="16" y="14" width="12" height="8" rx="1" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <rect x="36" y="14" width="12" height="8" rx="1" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <line x1="28" y1="18" x2="36" y2="18" stroke="var(--secondary)" stroke-width="1"/>
+                                <rect x="16" y="26" width="32" height="8" rx="1" stroke="var(--secondary)" stroke-width="1" fill="none"/>
+                                <circle cx="22" cy="30" r="1.5" fill="var(--secondary)"/>
+                                <circle cx="28" cy="30" r="1.5" fill="var(--secondary)"/>
+                            </svg>
+                        </div>
+                        <h3>Architecture</h3>
+                        <div class="bento-tags">
+                            <span class="bento-tag" data-tooltip="64-bit ARM architecture (AArch64)">ARM64</span>
+                            <span class="bento-tag" data-tooltip="32-bit ARM architecture (AArch32)">ARM32</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 2: 3 medium cards -->
+                <div class="bento-item bento-medium bento-tilt">
+                    <div class="bento-glow"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg class="bento-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="32,8 36,14 44,12 44,20 52,22 48,30 54,36 48,40 50,48 42,48 38,56 32,50 26,56 22,48 14,48 16,40 10,36 16,30 12,22 20,20 20,12 28,14" stroke="var(--secondary)" stroke-width="1.5" fill="none" stroke-linejoin="miter"/>
+                                <circle cx="32" cy="32" r="8" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+                                <circle cx="32" cy="32" r="3" fill="var(--accent)"/>
+                            </svg>
+                        </div>
+                        <h3>Build & Tools</h3>
+                        <div class="bento-tags">
+                            <span class="bento-tag" data-tooltip="Cross-platform build system">CMake</span>
+                            <span class="bento-tag" data-tooltip="Build script configuration generator">Premake5</span>
+                            <span class="bento-tag" data-tooltip="Distributed version control system">Git</span>
+                            <span class="bento-tag" data-tooltip="Scalable version control for game dev">Perforce</span>
+                            <span class="bento-tag" data-tooltip="Microsoft IDE for C/C++/C#">Visual Studio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item bento-medium bento-tilt">
+                    <div class="bento-glow"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg class="bento-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 52 L12 20 L32 8 L52 20 L52 52 L32 60 Z" stroke="var(--secondary)" stroke-width="1.5" fill="none" stroke-linejoin="miter"/>
+                                <path d="M32 8 L32 60" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <path d="M12 20 L52 20" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <path d="M20 28 L28 24 L36 28 L36 38 L28 42 L20 38 Z" stroke="var(--accent)" stroke-width="1" fill="rgba(0,212,255,0.1)" stroke-linejoin="miter"/>
+                                <circle cx="28" cy="33" r="2" fill="var(--secondary)"/>
+                            </svg>
+                        </div>
+                        <h3>JetBrains</h3>
+                        <div class="bento-tags">
+                            <span class="bento-tag" data-tooltip="JetBrains .NET & Unity IDE">Rider</span>
+                            <span class="bento-tag" data-tooltip="JetBrains C/C++ IDE">CLion</span>
+                            <span class="bento-tag" data-tooltip="JetBrains JavaScript IDE">WebStorm</span>
+                            <span class="bento-tag" data-tooltip="JetBrains Python IDE">PyCharm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item bento-medium bento-tilt">
+                    <div class="bento-glow"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg class="bento-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="32,6 56,20 56,44 32,58 8,44 8,20" stroke="var(--secondary)" stroke-width="1.5" fill="none" stroke-linejoin="miter"/>
+                                <polygon points="32,14 48,24 48,40 32,50 16,40 16,24" stroke="var(--accent)" stroke-width="1" fill="none" stroke-linejoin="miter"/>
+                                <line x1="32" y1="6" x2="32" y2="58" stroke="var(--secondary)" stroke-width="0.5"/>
+                                <line x1="8" y1="20" x2="56" y2="44" stroke="var(--secondary)" stroke-width="0.5"/>
+                                <line x1="56" y1="20" x2="8" y2="44" stroke="var(--secondary)" stroke-width="0.5"/>
+                                <circle cx="32" cy="32" r="4" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+                                <circle cx="32" cy="32" r="1.5" fill="var(--secondary)"/>
+                            </svg>
+                        </div>
+                        <h3>Graphics & GPU</h3>
+                        <div class="bento-tags">
+                            <span class="bento-tag" data-tooltip="Low-overhead cross-platform graphics API">Vulkan</span>
+                            <span class="bento-tag" data-tooltip="Cross-platform graphics rendering">OpenGL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item bento-medium bento-tilt">
+                    <div class="bento-glow"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg class="bento-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="22" stroke="var(--secondary)" stroke-width="1.5" fill="none"/>
+                                <ellipse cx="32" cy="32" rx="10" ry="22" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <line x1="10" y1="32" x2="54" y2="32" stroke="var(--accent)" stroke-width="1"/>
+                                <path d="M18 20 L46 20" stroke="var(--secondary)" stroke-width="0.8"/>
+                                <path d="M18 44 L46 44" stroke="var(--secondary)" stroke-width="0.8"/>
+                                <circle cx="32" cy="10" r="2" fill="var(--accent)"/>
+                                <circle cx="32" cy="54" r="2" fill="var(--accent)"/>
+                            </svg>
+                        </div>
+                        <h3>Operating Systems</h3>
+                        <div class="bento-tags">
+                            <span class="bento-tag" data-tooltip="Windows development & deployment">Windows</span>
+                            <span class="bento-tag" data-tooltip="macOS development & deployment">macOS</span>
+                            <span class="bento-tag" data-tooltip="Linux development & deployment">Linux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item bento-medium bento-tilt">
+                    <div class="bento-glow"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg class="bento-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 6 L54 18 L54 46 L32 58 L10 46 L10 18 Z" stroke="var(--secondary)" stroke-width="1.5" fill="none" stroke-linejoin="miter"/>
+                                <path d="M32 6 L32 58" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <path d="M10 18 L54 18" stroke="var(--accent)" stroke-width="1" fill="none"/>
+                                <path d="M10 18 L32 30 L54 18" stroke="var(--secondary)" stroke-width="1" fill="none" stroke-linejoin="miter"/>
+                                <path d="M10 46 L32 30 L54 46" stroke="var(--secondary)" stroke-width="1" fill="none" stroke-linejoin="miter"/>
+                                <circle cx="32" cy="30" r="3" fill="var(--accent)"/>
+                            </svg>
+                        </div>
+                        <h3>Custom STD Library</h3>
+                        <div class="bento-tags">
+                            <span class="bento-tag" data-tooltip="Custom dynamic array implementation">Vectors</span>
+                            <span class="bento-tag" data-tooltip="Custom string class with memory management">Strings</span>
+                            <span class="bento-tag" data-tooltip="Smart pointers: unique_ptr, shared_ptr">Smart Pointers</span>
+                            <span class="bento-tag" data-tooltip="Custom container classes">Containers</span>
+                            <span class="bento-tag" data-tooltip="Sorting, searching, iteration algorithms">Algorithms</span>
+                            <span class="bento-tag" data-tooltip="Memory allocators & pool management">Memory Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image space-invaders-bg">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" onclick="openVideoModal(event)">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Space Invaders</h3>
+                        <p>Recreation of the legendary arcade game Space Invaders in the ESAT graphics library.</p>
+                        <div class="project-tags">
+                            <span class="tag">ESAT_rev248</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">2D</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-details-content">
+                                <h4>Technical Details</h4>
+                                <ul>
+                                    <li>Custom game loop with delta time</li>
+                                    <li>Sprite animation system</li>
+                                    <li>Collision detection & response</li>
+                                    <li>Sound effects integration</li>
+                                    <li>Wave-based enemy patterns</li>
+                                    <li>Score tracking & high scores</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="project-toggle">[+] Technical details</span>
+                    </div>
+                </div>
+                <!--
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">Ver Detalles</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Proyecto 2</h3>
+                            <p>FPS multijugador con networking y matchmaking en Unreal Engine</p>
+                            <div class="project-tags">
+                                <span class="tag">Unreal</span>
+                                <span class="tag">C++</span>
+                                <span class="tag">Multiplayer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">Ver Detalles</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Proyecto 3</h3>
+                            <p>Puzzle game móvil con más de 100k descargas</p>
+                            <div class="project-tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">Mobile</span>
+                                <span class="tag">2D</span>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¡Let's work together!</h3>
+                    <p>I am available for freelance projects and job opportunities in video game development.</p>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanrlobz" method="POST">
+                        <input type="text" name="nombre" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>                
+                        <textarea name="mensaje" placeholder="Your mensaje" rows="5" required></textarea>                
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Adam Puche Lioubavina. All rights reserved.</p>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+            <h3>Space Invaders - Demo</h3>
+            <div class="video-container">
+                <video 
+                    id="videoPlayer"
+                    controls
+                    preload="metadata">
+                    <source src="videos/space_invaders.mp4" type="video/mp4">
+                    <source src="videos/space-invaders.webm" type="video/webm">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
