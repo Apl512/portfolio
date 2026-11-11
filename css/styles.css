@@ -883,6 +883,14 @@ section {
     background-repeat: no-repeat;
 }
 
+/* OpenGL Navigation System Background */
+.opengl-bg {
+    background-image: url('../img/openGL-img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .project-overlay {
     position: absolute;
     top: 0;

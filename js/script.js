@@ -393,6 +393,10 @@ const terminalCommands = {
   <span class="skill-highlight">Space Invaders</span>
   Recreation of the legendary arcade game in the ESAT graphics library.
   Technologies: C++, ESAT_rev248, 2D graphics
+
+  <span class="skill-highlight">OpenGL Navigation System</span>
+  Custom navigation and rendering system built from scratch with an OpenGL-based EDK.
+  Technologies: C++, OpenGL, Custom EDK, 3D rendering
   
   Scroll down to the Projects section for more details!`;
         }
@@ -651,35 +655,51 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
 });
 
 // ==========================================
-// Video Modal
+// Video Modal (supports multiple modals)
 // ==========================================
-function openVideoModal(event) {
-    if (event) event.preventDefault();
-    const modal = document.getElementById('videoModal');
-    const video = document.getElementById('videoPlayer');
+function openVideoModal(event, modalId, videoId) {
+    event.preventDefault();
+    const modal = document.getElementById(modalId);
+    const videoPlayer = document.getElementById(videoId);
+    
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Play video when modal opens
+    videoPlayer.play();
 }
 
-function closeVideoModal() {
-    const modal = document.getElementById('videoModal');
-    const video = document.getElementById('videoPlayer');
+function closeVideoModal(modalId, videoId) {
+    const modal = document.getElementById(modalId);
+    const videoPlayer = document.getElementById(videoId);
+    
     modal.classList.remove('active');
-    document.body.style.overflow = '';
-    video.pause();
+    
+    // Pause and reset video
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+    
+    document.body.style.overflow = 'auto';
 }
 
-// Close modal on outside click
-document.querySelector('.modal')?.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
-        closeVideoModal();
-    }
+// Close all modals on outside click
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            // Find the close button and trigger it
+            const closeBtn = this.querySelector('.close-modal');
+            if (closeBtn) closeBtn.click();
+        }
+    });
 });
 
-// Close modal on Escape key
-document.addEventListener('keydown', (e) => {
+// Close all modals on Escape key
+document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-        closeVideoModal();
+        document.querySelectorAll('.modal.active').forEach(modal => {
+            const closeBtn = modal.querySelector('.close-modal');
+            if (closeBtn) closeBtn.click();
+        });
     }
 });
 
@@ -702,44 +722,4 @@ document.addEventListener('mousemove', (e) => {
     document.body.appendChild(trail);
     
     setTimeout(() => trail.remove(), 500);
-});
-
-// Video Modal Functions
-function openVideoModal(event) {
-    event.preventDefault();
-    const modal = document.getElementById('videoModal');
-    const videoPlayer = document.getElementById('videoPlayer');
-    
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    
-    // Reproducir el video cuando se abra el modal
-    videoPlayer.play();
-}
-
-function closeVideoModal() {
-    const modal = document.getElementById('videoModal');
-    const videoPlayer = document.getElementById('videoPlayer');
-    
-    modal.classList.remove('active');
-    
-    // Pausar y reiniciar el video
-    videoPlayer.pause();
-    videoPlayer.currentTime = 0;
-    
-    document.body.style.overflow = 'auto';
-}
-
-// Cerrar modal al hacer click fuera del contenido
-document.getElementById('videoModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeVideoModal();
-    }
-});
-
-// Cerrar modal con la tecla Escape
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeVideoModal();
-    }
 });

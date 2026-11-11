@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam P.Lioubavina — Game Developer</title>
     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="favicon/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="favicon/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -344,7 +342,7 @@
                 <div class="project-card">
                     <div class="project-image space-invaders-bg">
                         <div class="project-overlay">
-                            <a href="#" class="project-link" onclick="openVideoModal(event)">View Details</a>
+                            <a href="#" class="project-link" onclick="openVideoModal(event, 'videoModal', 'videoPlayer')">View Details</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -365,6 +363,37 @@
                                     <li>Sound effects integration</li>
                                     <li>Wave-based enemy patterns</li>
                                     <li>Score tracking & high scores</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="project-toggle">[+] Technical details</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image opengl-bg">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" onclick="openVideoModal(event, 'openglModal', 'openglPlayer')">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>OpenGL Navigation System</h3>
+                        <p>Custom navigation and rendering system built from scratch with an OpenGL-based EDK.</p>
+                        <div class="project-tags">
+                            <span class="tag">OpenGL</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Custom EDK</span>
+                            <span class="tag">3D</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-details-content">
+                                <h4>Technical Details</h4>
+                                <ul>
+                                    <li>Custom OpenGL-based EDK</li>
+                                    <li>3D navigation and rendering pipeline</li>
+                                    <li>Scene graph and object management</li>
+                                    <li>Camera system and transformations</li>
+                                    <li>Shader programming</li>
+                                    <li>Real-time rendering optimization</li>
                                 </ul>
                             </div>
                         </div>
@@ -433,10 +462,10 @@
         <p>&copy; 2025 Adam Puche Lioubavina. All rights reserved.</p>
     </footer>
 
-    <!-- Video Modal -->
+    <!-- Video Modal: Space Invaders -->
     <div id="videoModal" class="modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+            <span class="close-modal" onclick="closeVideoModal('videoModal', 'videoPlayer')">&times;</span>
             <h3>Space Invaders - Demo</h3>
             <div class="video-container">
                 <video 
@@ -445,6 +474,23 @@
                     preload="metadata">
                     <source src="videos/space_invaders.mp4" type="video/mp4">
                     <source src="videos/space-invaders.webm" type="video/webm">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal: OpenGL Navigation System -->
+    <div id="openglModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideoModal('openglModal', 'openglPlayer')">&times;</span>
+            <h3>OpenGL Navigation System - Demo</h3>
+            <div class="video-container">
+                <video 
+                    id="openglPlayer"
+                    controls
+                    preload="metadata">
+                    <source src="videos/opengl_edk.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de videos.
                 </video>
             </div>
