@@ -1750,6 +1750,7 @@ section {
     .bento-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        gap: 1rem;
     }
 
     .bento-large {
@@ -1763,17 +1764,52 @@ section {
         grid-row: auto;
     }
 
+    /* Reset nth-child grid positions on mobile */
+    .bento-grid .bento-medium:nth-child(4),
+    .bento-grid .bento-medium:nth-child(5),
+    .bento-grid .bento-medium:nth-child(6),
+    .bento-grid .bento-medium:nth-child(7),
+    .bento-grid .bento-medium:nth-child(8),
+    .bento-grid .bento-medium:nth-child(9),
+    .bento-grid .bento-medium:nth-child(10) {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
     .bento-item {
-        padding: 1.5rem;
+        padding: 0;
+    }
+
+    .bento-content {
+        padding: 1.5rem 1.2rem;
     }
 
     .bento-item h3 {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .bento-svg-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .bento-large .bento-svg-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .bento-icon {
+        margin-bottom: 0.8rem;
+    }
+
+    .bento-tags {
+        gap: 0.5rem;
     }
 
     .bento-tag {
         font-size: 0.7rem;
-        padding: 4px 10px;
+        padding: 5px 10px;
     }
 
     /* Projects */
