@@ -702,24 +702,3 @@ document.addEventListener('keydown', function(e) {
         });
     }
 });
-
-// Add cursor trail effect
-document.addEventListener('mousemove', (e) => {
-    const trail = document.createElement('div');
-    trail.style.cssText = `
-        position: fixed;
-        width: 5px;
-        height: 5px;
-        background: var(--primary);
-        border-radius: 50%;
-        pointer-events: none;
-        left: ${e.clientX}px;
-        top: ${e.clientY}px;
-        opacity: 0.6;
-        animation: trailFade 0.5s ease forwards;
-        z-index: 9999;
-    `;
-    document.body.appendChild(trail);
-    
-    setTimeout(() => trail.remove(), 500);
-});
