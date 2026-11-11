@@ -891,6 +891,22 @@ section {
     background-repeat: no-repeat;
 }
 
+/* Infinite Runner 2.5D Background */
+.infinite-runner-bg {
+    background-image: url('../img/infinite_runner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tikki Takka Mesh Background */
+.tikki-takka-bg {
+    background-image: url('../img/TikkiTakka.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .project-overlay {
     position: absolute;
     top: 0;
@@ -1465,16 +1481,8 @@ section {
     transform: translateX(-50%) translateY(0);
 }
 
-/* Project Card Expandable Details */
+/* Project Details - Always Visible */
 .project-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, padding 0.5s ease;
-    border-top: 0px solid transparent;
-}
-
-.project-card.expanded .project-details {
-    max-height: 300px;
     padding-top: 1rem;
     border-top: 1px solid rgba(196, 113, 245, 0.1);
 }
@@ -1512,25 +1520,6 @@ section {
     color: var(--primary);
 }
 
-.project-toggle {
-    display: inline-block;
-    margin-top: 0.8rem;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--secondary);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-    border: 1px solid rgba(0, 212, 255, 0.2);
-    padding: 5px 12px;
-    border-radius: 2px;
-}
-
-.project-toggle:hover {
-    color: var(--light);
-    border-color: var(--secondary);
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
-}
 
 /* Interactive hover glow on section titles */
 .section-title {

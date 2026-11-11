@@ -397,7 +397,15 @@ const terminalCommands = {
   <span class="skill-highlight">OpenGL Navigation System</span>
   Custom navigation and rendering system built from scratch with an OpenGL-based EDK.
   Technologies: C++, OpenGL, Custom EDK, 3D rendering
-  
+
+  <span class="skill-highlight">Infinite Runner 2.5D</span>
+  Endless runner game with 2.5D perspective and pixel art aesthetics set in a forest environment.
+  Technologies: C#, Unity, 2.5D, Pixel Art
+
+  <span class="skill-highlight">Tikki Takka Mesh</span>
+  Roguelite 3D game with fixed camera, developed in 3 days at Global Game Jam Valencia 2026.
+  Technologies: C#, Unity, Roguelite, 3D
+   
   Scroll down to the Projects section for more details!`;
         }
     },
@@ -603,18 +611,6 @@ document.querySelectorAll('.btn').forEach(button => {
         this.appendChild(ripple);
         
         setTimeout(() => ripple.remove(), 600);
-    });
-});
-
-// ==========================================
-// Project Card Expandable Details
-// ==========================================
-document.querySelectorAll('.project-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        const card = toggle.closest('.project-card');
-        card.classList.toggle('expanded');
-        toggle.textContent = card.classList.contains('expanded') ? '[-] Less details' : '[+] Technical details';
     });
 });
 

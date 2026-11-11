@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam P.Lioubavina — Game Developer</title>
+    <meta name="description" content="Adam Puche Lioubavina — Game Programmer based in Valencia, Spain. Specialized in C++, C#, Unity, Unreal Engine 5, Vulkan, and OpenGL.">
+    <meta property="og:title" content="Adam P.Lioubavina — Game Developer">
+    <meta property="og:description" content="Game Programmer based in Valencia, Spain. Specialized in C++, C#, Unity, Unreal Engine 5, Vulkan, and OpenGL.">
+    <meta property="og:type" content="website">
     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -53,7 +58,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">ADAM P.LIOUBAVINA</div>
-            <div class="nav-toggle" id="navToggle">
+            <div class="nav-toggle" id="navToggle" role="button" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -62,7 +67,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About me</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Proyects</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -76,7 +81,7 @@
             <p class="hero-subtitle"><span id="typed-text"></span><span class="typed-cursor">|</span></p>
             <p class="hero-location">📍 Valencia, Spain</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">See proyects</a>
+                <a href="#projects" class="btn btn-primary">See projects</a>
                 <a href="#contact" class="btn btn-secondary">Contact me</a>
             </div>
         </div>
@@ -91,9 +96,9 @@
         <div class="terminal" id="terminal">
             <div class="terminal-header">
                 <div class="terminal-buttons">
-                    <span class="terminal-btn close"></span>
-                    <span class="terminal-btn minimize"></span>
-                    <span class="terminal-btn maximize"></span>
+                    <span class="terminal-btn close" aria-label="Close terminal"></span>
+                    <span class="terminal-btn minimize" aria-label="Minimize terminal"></span>
+                    <span class="terminal-btn maximize" aria-label="Maximize terminal"></span>
                 </div>
                 <span class="terminal-title">adam@portfolio:~</span>
             </div>
@@ -121,19 +126,19 @@
                         <h3>Idiomas</h3>
                         <div class="language-list">
                             <span class="language-tag">🇪🇸 Spanish (Native)</span>
-                            <span class="language-tag">🇬🇧 English (B2)</span>
+                            <span class="language-tag">🇬🇧 English (C1)</span>
                             <span class="language-tag">🇷🇺 Russian (B1)</span>
-                            <span class="language-tag">🇯🇵 Japonese (A1)</span>
+                            <span class="language-tag">🇯🇵 Japanese (A1)</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-number" data-target="1">0</span>
                         <span class="stat-label">Years of Work Experience</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-number" data-target="3">0</span>
                         <span class="stat-label">Completed Projects</span>
                     </div>
                     <div class="stat-card">
@@ -337,7 +342,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Proyects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image space-invaders-bg">
@@ -366,7 +371,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <span class="project-toggle">[+] Technical details</span>
                     </div>
                 </div>
                 <div class="project-card">
@@ -397,7 +401,66 @@
                                 </ul>
                             </div>
                         </div>
-                        <span class="project-toggle">[+] Technical details</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image infinite-runner-bg">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" onclick="openVideoModal(event, 'infiniteModal', 'infinitePlayer')">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Infinite Runner 2.5D</h3>
+                        <p>Endless runner game with 2.5D perspective and pixel art aesthetics set in a forest environment.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">2.5D</span>
+                            <span class="tag">Pixel Art</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-details-content">
+                                <h4>Technical Details</h4>
+                                <ul>
+                                    <li>Unity game engine with C# scripting</li>
+                                    <li>2.5D perspective camera system</li>
+                                    <li>Procedural level generation</li>
+                                    <li>Pixel art animation system</li>
+                                    <li>Obstacle avoidance mechanics</li>
+                                    <li>Score tracking and difficulty scaling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image tikki-takka-bg">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tikki Takka Mesh</h3>
+                        <p>Roguelite 3D game with fixed camera, developed in 3 days at Global Game Jam Valencia 2026.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Roguelite</span>
+                            <span class="tag">3D</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-details-content">
+                                <h4>Technical Details</h4>
+                                <ul>
+                                    <li>Unity game engine with C# scripting</li>
+                                    <li>Roguelite procedural generation</li>
+                                    <li>Fixed camera 3D perspective</li>
+                                    <li>Developed in 3 days at Global Game Jam Valencia 2026</li>
+                                    <li>Level randomization and replayability</li>
+                                    <li>Progression and upgrade systems</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!--
@@ -449,7 +512,7 @@
                     <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanrlobz" method="POST">
                         <input type="text" name="nombre" placeholder="Your name" required>
                         <input type="email" name="email" placeholder="Your email" required>                
-                        <textarea name="mensaje" placeholder="Your mensaje" rows="5" required></textarea>                
+                        <textarea name="mensaje" placeholder="Your message" rows="5" required></textarea>
                         <button type="submit" class="btn btn-primary">Send</button>
                     </form>
                 </div>
@@ -465,7 +528,7 @@
     <!-- Video Modal: Space Invaders -->
     <div id="videoModal" class="modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeVideoModal('videoModal', 'videoPlayer')">&times;</span>
+            <span class="close-modal" onclick="closeVideoModal('videoModal', 'videoPlayer')" aria-label="Close modal">&times;</span>
             <h3>Space Invaders - Demo</h3>
             <div class="video-container">
                 <video 
@@ -483,7 +546,7 @@
     <!-- Video Modal: OpenGL Navigation System -->
     <div id="openglModal" class="modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeVideoModal('openglModal', 'openglPlayer')">&times;</span>
+            <span class="close-modal" onclick="closeVideoModal('openglModal', 'openglPlayer')" aria-label="Close modal">&times;</span>
             <h3>OpenGL Navigation System - Demo</h3>
             <div class="video-container">
                 <video 
@@ -491,6 +554,23 @@
                     controls
                     preload="metadata">
                     <source src="videos/opengl_edk.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal: Infinite Runner 2.5D -->
+    <div id="infiniteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideoModal('infiniteModal', 'infinitePlayer')" aria-label="Close modal">&times;</span>
+            <h3>Infinite Runner 2.5D - Demo</h3>
+            <div class="video-container">
+                <video 
+                    id="infinitePlayer"
+                    controls
+                    preload="metadata">
+                    <source src="videos/infinite.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de videos.
                 </video>
             </div>
